@@ -165,13 +165,13 @@ const Header = () => {
     return (
         <>
             <Box sx={{ flexGrow: 1, height: "70px" }}>
-                <AppBar sx={{}}>
+                <AppBar>
                     <Toolbar sx={{ backgroundColor: "#084356" }}>
                         <IconButton
                             size="large"
                             edge="start"
                         >
-                            <img src={logo} alt="" width={"60%"} />
+                            <Link to="/"><img src={logo} alt="" width={"60%"} /></Link>
                         </IconButton>
 
                         <Box sx={{ flexGrow: 1 }} />
@@ -242,12 +242,12 @@ const Header = () => {
                 {renderMobileMenu}
                 {renderMenu}
             </Box>
-            <Box sx={{  display: { xs: 'none', md: 'flex',justifyContent:"center" }}}>
+            <Box sx={{  display: {  md: 'flex',justifyContent:"center" }}}>
                 {pages.map((page) => (
-                    <Link to={page.path} style={{ textDecoration: 'none',marginRight:"2%" }}>
+                    <Link to={page.path} style={{ textDecoration: 'none', margin:"1.5%" }}>
                         <Button
                             key={page}
-                            sx={{ color: 'black', display: 'block' , fontSize:"16px", fontWeight:"bold"}}
+                            sx={{ color: 'black' , fontSize:"16px", fontWeight:"bold"}}
                         >
                             {page.name}
                         </Button>
